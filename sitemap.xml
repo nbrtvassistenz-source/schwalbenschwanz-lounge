@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/0.9">
+  <url>
+    <loc>https://nbrtvassistenz-source.github.io/schwalbenschwanz-lounge/</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nbrtvassistenz-source.github.io/schwalbenschwanz-lounge/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nbrtvassistenz-source.github.io/schwalbenschwanz-lounge/?lang=nl"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schwalbenschwanz-lounge.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nbrtvassistenz-source.github.io/schwalbenschwanz-lounge/"/>
+    <image:image>
+      <image:loc>https://nbrtvassistenz-source.github.io/schwalbenschwanz-lounge/assets/lounge-front.jpg</image:loc>
+      <image:title>Schwalbenschwanz Lounge — two-storey VIP lounge at the 24h Nürburgring 2026</image:title>
+      <image:caption>Front view of the new two-storey Schwalbenschwanz Lounge for the 2026 24h Nürburgring race weekend</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://nbrtvassistenz-source.github.io/schwalbenschwanz-lounge/assets/lounge-stairs.jpg</image:loc>
+      <image:title>Schwalbenschwanz Lounge exterior with stairs to upper floor</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nbrtvassistenz-source.github.io/schwalbenschwanz-lounge/assets/atmos-8.jpg</image:loc>
+      <image:title>GT3 race car on the Nordschleife</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nbrtvassistenz-source.github.io/schwalbenschwanz-lounge/assets/atmos-9.jpg</image:loc>
+      <image:title>Pack of GT3 race cars at the legendary Schwalbenschwanz corner</image:title>
+    </image:image>
+  </url>
+</urlset>

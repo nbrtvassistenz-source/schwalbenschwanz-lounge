@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nbrtvassistenz-source.github.io/schwalbenschwanz-lounge/sitemap.xml
