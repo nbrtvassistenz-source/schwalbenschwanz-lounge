@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Schwalbenschwanz Lounge – 24h Nürburgring 2026. Exclusive VIP lounge experience on two floors. 14-17 May 2026.">
+<title>Schwalbenschwanz Lounge – 24h Nürburgring 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0a;
+  --bg2:#141414;
+  --bg3:#1a1a1a;
+  --gold:#C9A84C;
+  --gold-soft:#e6c878;
+  --text:#f2f2f2;
+  --muted:#b5b5b5;
+  --border:rgba(201,168,76,.25);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:.3px;line-height:1.2}
+h1{font-size:clamp(2rem,5vw,3.8rem)}
+h2{font-size:clamp(1.6rem,3.5vw,2.6rem);color:var(--gold);margin-bottom:1.5rem}
+h3{font-size:clamp(1.2rem,2.2vw,1.5rem);color:var(--gold-soft)}
+a{color:var(--gold);text-decoration:none;transition:color .2s}
+a:hover{color:var(--gold-soft)}
+img{max-width:100%;display:block}
+
+.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+section{padding:5rem 0;position:relative}
+.divider{
+  height:30px;
+  background:url('https://schwalbenschwanz-lounge.com/wp-content/uploads/2025/01/Reifenspur_Gold-1.png') center/contain no-repeat;
+  opacity:.8;
+  margin:1rem 0;
+}
+
+/* HEADER */
+header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(10,10,10,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.9rem 1.5rem;max-width:1400px;margin:0 auto;gap:1rem;flex-wrap:wrap;
+}
+.logos{display:flex;align-items:center;gap:1rem}
+.logos img{height:48px;width:auto}
+.logos img.adac{height:42px}
+.header-actions{display:flex;align-items:center;gap:1rem}
+.lang-toggle{
+  display:flex;border:1px solid var(--gold);border-radius:50px;overflow:hidden;font-size:.85rem;
+}
+.lang-toggle button{
+  background:transparent;color:var(--text);border:none;padding:.4rem .9rem;cursor:pointer;font-weight:600;transition:all .2s;
+}
+.lang-toggle button.active{background:var(--gold);color:#0a0a0a}
+
+.btn{
+  display:inline-block;
+  background:var(--gold);color:#0a0a0a;
+  padding:.85rem 1.8rem;border-radius:4px;
+  font-weight:700;font-family:'Montserrat',sans-serif;
+  text-transform:uppercase;letter-spacing:1px;font-size:.9rem;
+  border:2px solid var(--gold);cursor:pointer;transition:all .25s;
+}
+.btn:hover{background:transparent;color:var(--gold)}
+.btn-outline{background:transparent;color:var(--gold)}
+.btn-outline:hover{background:var(--gold);color:#0a0a0a}
+
+/* HERO */
+.hero{
+  min-height:90vh;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;
+  background:
+    linear-gradient(rgba(10,10,10,.75),rgba(10,10,10,.85)),
+    url('https://schwalbenschwanz-lounge.com/wp-content/uploads/2025/09/SchwalbenschwanzLounge-118-600x400.jpg') center/cover;
+  padding:4rem 1.5rem;
+}
+.hero h1{color:#fff;margin-bottom:1rem}
+.hero h1 span{color:var(--gold);display:block;margin-top:.3rem}
+.hero .sub{font-size:clamp(1.1rem,2vw,1.4rem);color:var(--muted);margin-bottom:1.5rem;max-width:820px;margin-left:auto;margin-right:auto}
+.hero .date-note{color:var(--gold-soft);font-weight:500;margin-bottom:2rem}
+
+/* TEASER */
+.teaser{text-align:center;max-width:900px;margin:0 auto}
+.teaser p{font-size:1.15rem;color:var(--muted);margin-bottom:1rem}
+.event-meta{margin-top:1.5rem;color:var(--gold-soft);font-weight:500}
+
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:2rem}
+.card{
+  background:var(--bg2);
+  border:1px solid var(--border);
+  padding:2rem;border-radius:6px;
+  text-align:center;transition:transform .3s,border-color .3s;
+}
+.card:hover{transform:translateY(-5px);border-color:var(--gold)}
+.card h3{margin-bottom:1rem}
+.card p{color:var(--muted);margin-bottom:1.5rem;min-height:60px}
+
+/* TWO FLOORS / VIDEO */
+.two-floors{text-align:center;background:var(--bg2)}
+.video-thumb{
+  position:relative;max-width:900px;margin:2rem auto 0;cursor:pointer;
+  border:2px solid var(--gold);border-radius:8px;overflow:hidden;transition:transform .3s;
+}
+.video-thumb:hover{transform:scale(1.02)}
+.video-thumb img{width:100%;display:block}
+.play-btn{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:90px;height:90px;border-radius:50%;
+  background:rgba(201,168,76,.92);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 40px rgba(201,168,76,.6);
+}
+.play-btn::before{
+  content:'';border-left:28px solid #0a0a0a;
+  border-top:18px solid transparent;border-bottom:18px solid transparent;margin-left:6px;
+}
+
+/* EVENT */
+.event-content{max-width:900px;margin:0 auto;text-align:center}
+.event-content p{color:var(--muted);font-size:1.1rem;margin-bottom:2rem}
+.sponsor-box{
+  background:var(--bg2);border:1px solid var(--gold);
+  padding:1.5rem;border-radius:6px;margin-top:2rem;
+}
+
+/* COUNTDOWN */
+.countdown-section{background:var(--bg3);text-align:center}
+.countdown{
+  display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:2rem;
+}
+.cd-box{
+  background:var(--bg);border:1px solid var(--gold);
+  padding:1.2rem 1.5rem;border-radius:6px;min-width:110px;
+}
+.cd-num{font-family:'Montserrat',sans-serif;font-size:2.8rem;font-weight:800;color:var(--gold);line-height:1}
+.cd-label{font-size:.85rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:.4rem}
+
+/* TICKETS */
+.tickets{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:2rem}
+.ticket{
+  background:var(--bg2);border:1px solid var(--border);
+  padding:2rem;border-radius:6px;display:flex;flex-direction:column;
+  transition:all .3s;
+}
+.ticket:hover{border-color:var(--gold);transform:translateY(-3px)}
+.ticket h3{margin-bottom:.5rem}
+.ticket .price{font-family:'Montserrat',sans-serif;font-size:1.8rem;color:var(--gold);font-weight:700;margin:.5rem 0 1rem}
+.ticket p{color:var(--muted);font-size:.95rem;margin-bottom:1.5rem;flex-grow:1}
+.ticket .btn{align-self:flex-start}
+.ticket-note{text-align:center;color:var(--muted);font-style:italic;margin-top:2rem}
+
+/* GALLERY */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-top:2rem}
+.gallery img{
+  width:100%;height:180px;object-fit:cover;border-radius:4px;
+  cursor:pointer;transition:transform .3s,opacity .3s;
+  border:1px solid var(--border);
+}
+.gallery img:hover{transform:scale(1.04);opacity:.9;border-color:var(--gold)}
+
+/* LIGHTBOX */
+.lightbox{
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,.95);
+  z-index:1000;align-items:center;justify-content:center;padding:2rem;cursor:pointer;
+}
+.lightbox.active{display:flex}
+.lightbox img{max-width:95%;max-height:95%;border:2px solid var(--gold)}
+
+/* SCHEDULE */
+.schedule-day{margin-bottom:2.5rem}
+.schedule-day h3{color:var(--gold);border-bottom:1px solid var(--border);padding-bottom:.5rem;margin-bottom:1rem}
+.schedule-item{
+  display:grid;grid-template-columns:130px 1fr;gap:1rem;
+  padding:.7rem 0;border-bottom:1px solid rgba(255,255,255,.05);
+}
+.schedule-item .time{color:var(--gold-soft);font-weight:600;font-family:'Montserrat',sans-serif;font-size:.95rem}
+.schedule-item .desc{color:var(--muted);font-size:.95rem}
+.schedule-notes{background:var(--bg2);padding:1.5rem;border-radius:6px;margin-top:2rem;border-left:3px solid var(--gold)}
+.schedule-notes p{color:var(--muted);margin-bottom:.8rem;font-size:.95rem}
+.schedule-notes p:last-child{margin-bottom:0}
+
+/* VENUE */
+.venue{text-align:center;background:var(--bg2)}
+.venue img{max-width:100%;margin:2rem auto;border:1px solid var(--gold);border-radius:6px}
+.parking-links{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1rem}
+
+/* FAQ */
+.faq-item{
+  background:var(--bg2);border:1px solid var(--border);
+  margin-bottom:.8rem;border-radius:6px;overflow:hidden;
+}
+.faq-q{
+  padding:1.2rem 1.5rem;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;
+  font-weight:600;font-family:'Montserrat',sans-serif;color:#fff;
+  transition:background .2s;
+}
+.faq-q:hover{background:var(--bg3)}
+.faq-q .icon{color:var(--gold);font-size:1.5rem;font-weight:300;transition:transform .3s;line-height:1}
+.faq-item.open .faq-q .icon{transform:rotate(45deg)}
+.faq-a{
+  max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;
+  padding:0 1.5rem;color:var(--muted);
+}
+.faq-item.open .faq-a{max-height:1200px;padding:.5rem 1.5rem 1.5rem}
+.faq-a ul{margin:.8rem 0 0 1.2rem}
+.faq-a li{margin-bottom:.4rem}
+
+/* SPONSORS */
+.sponsors{background:var(--bg3);text-align:center}
+.sponsor-logos{
+  display:flex;flex-wrap:wrap;justify-content:center;align-items:center;
+  gap:2.5rem;margin-top:2rem;
+}
+.sponsor-logos img{
+  max-height:60px;max-width:160px;width:auto;object-fit:contain;
+  filter:brightness(0.95);opacity:.85;transition:opacity .3s;
+}
+.sponsor-logos img:hover{opacity:1}
+
+/* FOOTER */
+footer{
+  background:#050505;padding:3rem 0 2rem;border-top:1px solid var(--border);
+}
+.footer-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:2rem;margin-bottom:2rem;
+}
+.footer-col h4{color:var(--gold);margin-bottom:1rem;font-size:1rem;text-transform:uppercase;letter-spacing:1px}
+.footer-col p,.footer-col a{color:var(--muted);font-size:.9rem;display:block;margin-bottom:.4rem}
+.footer-logos{display:flex;gap:1rem;align-items:center;margin-bottom:1rem;flex-wrap:wrap}
+.footer-logos img{height:44px}
+.footer-bottom{
+  text-align:center;padding-top:2rem;border-top:1px solid var(--border);
+  color:var(--muted);font-size:.85rem;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .header-inner{padding:.8rem 1rem}
+  .logos img{height:36px}
+  .logos img.adac{height:32px}
+  section{padding:3.5rem 0}
+  .hero{min-height:75vh}
+  .schedule-item{grid-template-columns:100px 1fr;gap:.5rem}
+  .cd-box{min-width:80px;padding:1rem}
+  .cd-num{font-size:2rem}
+  .btn{padding:.7rem 1.4rem;font-size:.85rem}
+}
+@media(max-width:480px){
+  .header-actions{gap:.5rem}
+  .btn-header{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="logos">
+      <img src="https://schwalbenschwanz-lounge.com/wp-content/uploads/2025/01/SSL_Logo.png" alt="Schwalbenschwanz Lounge">
+      <img class="adac" src="https://schwalbenschwanz-lounge.com/wp-content/uploads/2025/01/ADAC_Ravenol_24h_2024_CMYK_1c_trans.png" alt="ADAC RAVENOL 24h">
+    </div>
+    <div class="header-actions">
+      <a href="#" class="btn btn-header" data-booking data-i18n="book_now">Book Now</a>
+      <div class="lang-toggle">
+        <button data-lang-btn="en" class="active">EN</button>
+        <button data-lang-btn="nl">NL</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1 data-i18n="hero_title_1">From 2026:<span data-i18n="hero_title_2">The real 24h feeling on two floors</span></h1>
+    <p class="sub" data-i18n="hero_sub">24 hours exclusive / Best view inclusive – Experience the 24-hour race 2026 like never before!</p>
+    <p class="date-note" data-i18n="hero_date">The 54th edition of the ADAC RAVENOL 24h Nürburgring takes place from May 14–17, 2026.</p>
+    <a href="#" class="btn" data-booking data-i18n="get_tickets">Get Tickets</a>
+  </div>
+</section>
+
+<!-- TEASER -->
+<section>
+  <div class="container teaser">
+    <h2 data-i18n="teaser_title">Experience the 24h race 2026</h2>
+    <p data-i18n="teaser_text">Enjoy the legendary 24-hour race 2026 in the exclusive Schwalbenschwanz Lounge. Let yourself be pampered with comfort and the best seats right in the action!</p>
+    <p class="event-meta"><span data-i18n="organizer">Organizer</span>: RingSpirit Events, Finkenweg 24, 53424 Remagen &nbsp;|&nbsp; <span data-i18n="date_label">Date</span>: <span data-i18n="event_dates">May 14–17, 2026</span></p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CARDS -->
+<section>
+  <div class="container">
+    <div class="cards">
+      <div class="card">
+        <h3 data-i18n="card1_title">Book Now</h3>
+        <p data-i18n="card1_text">Secure your tickets for an unforgettable racing experience!</p>
+        <a href="#" class="btn" data-booking data-i18n="book_now">Book Now</a>
+      </div>
+      <div class="card">
+        <h3 data-i18n="card2_title">The Event</h3>
+        <p data-i18n="card2_text">Be part of an extraordinary event and experience pure thrills!</p>
+        <a href="#event" class="btn btn-outline" data-i18n="learn_more">Learn more</a>
+      </div>
+      <div class="card">
+        <h3 data-i18n="card3_title">FAQ</h3>
+        <p data-i18n="card3_text">Questions about tickets and packages? Check our FAQ!</p>
+        <a href="#faq" class="btn btn-outline" data-i18n="view_faq">View FAQ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TWO FLOORS -->
+<section class="two-floors">
+  <div class="container">
+    <h2 data-i18n="two_floors_title">Now on two floors</h2>
+    <a href="#" class="btn" data-booking data-i18n="get_tickets">Get Tickets</a>
+    <a href="https://schwalbenschwanz-lounge.com/wp-content/uploads/2025/11/Trailer_2026_V03.mp4" target="_blank" rel="noopener" class="video-thumb">
+      <img src="https://schwalbenschwanz-lounge.com/wp-content/uploads/2025/11/Bildschirmfoto-2025-11-11-um-14.54.28.png" alt="Trailer 2026">
+      <div class="play-btn"></div>
+    </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EVENT -->
+<section id="event">
+  <div class="container event-content">
+    <h2 data-i18n="event_title">The Event</h2>
+    <p data-i18n="event_text">Unobstructed view of the racetrack of the legendary 24-hour race at the Nürburgring in an exclusive lounge with extraordinary ambiance. The around-the-clock live broadcast on numerous screens inside the lounge, including live ranking, guarantees you won't miss a second of the spectacular race. The lounge balcony offers a direct view of the exclusive, very large videowall set up on the other side of the racetrack especially for the Schwalbenschwanz Lounge.</p>
+    <div class="sponsor-box">
+      <p data-i18n="sponsor_ad"><strong>Your advertisement on the screens inside the lounge for all four days: €1,800</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="countdown-section">
+  <div class="container">
+    <h2 data-i18n="countdown_title">Race Start Countdown</h2>
+    <div class="countdown">
+      <div class="cd-box"><div class="cd-num" id="cd-days">0</div><div class="cd-label" data-i18n="days">Days</div></div>
+      <div class="cd-box"><div class="cd-num" id="cd-hours">0</div><div class="cd-label" data-i18n="hours">Hours</div></div>
+      <div class="cd-box"><div class="cd-num" id="cd-mins">0</div><div class="cd-label" data-i18n="minutes">Minutes</div></div>
+      <div class="cd-box"><div class="cd-num" id="cd-secs">0</div><div class="cd-label" data-i18n="seconds">Seconds</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TICKETS -->
+<section>
+  <div class="container">
+    <h2 style="text-align:center" data-i18n="tickets_title">Tickets & Packages</h2>
+    <div class="tickets">
+      <div class="ticket">
+        <h3 data-i18n="t1_title">VIP Ticket (4 Days)</h3>
+        <div class="price">€1,500 <span style="font-size:.9rem;color:var(--muted)">net</span></div>
+        <p data-i18n="t1_text">4-day full access for guests over 12 to the entire track (grandstands incl. paddock) and Schwalbenschwanz Lounge (Thursday–Sunday incl. catering). Including parking and shuttle service.</p>
+        <a href="#" class="btn" data-booking data-i18n="book_now">Book Now</a>
+      </div>
+      <div class="ticket">
+        <h3 data-i18n="t2_title">VIP Ticket Children up to 12 (4 Days)</h3>
+        <div class="price">€800 <span style="font-size:.9rem;color:var(--muted)">net</span></div>
+        <p data-i18n="t2_text">4-day full access for children under 12 to the entire track and Schwalbenschwanz Lounge (Thursday–Sunday) incl. catering.</p>
+        <a href="#" class="btn" data-booking data-i18n="book_now">Book Now</a>
+      </div>
+      <div class="ticket">
+        <h3 data-i18n="t3_title">Day VIP Ticket Children up to 12</h3>
+        <div class="price">€200 <span style="font-size:.9rem;color:var(--muted)">net</span></div>
+        <p data-i18n="t3_text">1-day full access for children under 12 to the entire track and Schwalbenschwanz Lounge incl. catering.</p>
+        <a href="#" class="btn" data-booking data-i18n="book_now">Book Now</a>
+      </div>
+      <div class="ticket">
+        <h3 data-i18n="t4_title">Day VIP Ticket Children up to 6</h3>
+        <div class="price" data-i18n="free">Free</div>
+        <p data-i18n="t4_text">1-day full access for children under 6. Free admission!</p>
+        <a href="#" class="btn" data-booking data-i18n="book_now">Book Now</a>
+      </div>
+      <div class="ticket">
+        <h3 data-i18n="t5_title">Sponsoring Packages</h3>
+        <div class="price" data-i18n="on_request">On request</div>
+        <p data-i18n="t5_text">Take the opportunity to present your brand to a wide audience! We offer two attractive sponsoring packages!</p>
+        <a href="#" class="btn" data-booking data-i18n="inquire">Inquire</a>
+      </div>
+    </div>
+    <p class="ticket-note" data-i18n="ticket_note">Tickets are not personalized and can be transferred at any time.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- GALLERY -->
+<section>
+  <div class="container">
+    <h2 style="text-align:center" data-i18n="review_title">Review 2025</h2>
+    <div class="gallery" id="gallery"></div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox"><img src="" alt=""></div>
+
+<div class="divider"></div>
+
+<!-- SCHEDULE -->
+<section>
+  <div class="container">
+    <h2 style="text-align:center" data-i18n="schedule_title">Schedule</h2>
+    <div id="schedule-wrap"></div>
+    <div class="schedule-notes">
+      <p data-i18n="note_1">Our team takes a short pit stop on Saturday night and closes the lounge at 01:00. On Sunday from 08:00 we welcome you back warmly. On Sunday, arrival must be before 9:30 AM, as shuttle service to the VIP parking is not available again until 14:30 due to departure traffic.</p>
+      <p data-i18n="note_2">Dogs are not permitted in the lounge, with the exception of guide dogs.</p>
+      <p data-i18n="note_3">Tickets will be sent approximately 2–3 weeks before the event.</p>
+      <p data-i18n="note_4">Track variants: GE = Full circuit incl. Nordschleife. Subject to change.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- VENUE -->
+<section class="venue">
+  <div class="container">
+    <h2 data-i18n="venue_title">Venue & Parking</h2>
+    <img src="https://schwalbenschwanz-lounge.com/wp-content/uploads/2025/11/SSL_Karte_Shuttle_2026.png" alt="Venue Map">
+    <div class="parking-links">
+      <a href="https://maps.app.goo.gl/5MkjC1BzWQG2HmVUA" target="_blank" rel="noopener" class="btn btn-outline">P1 – Parking + Shuttle</a>
+      <a href="https://maps.app.goo.gl/Yu2aSv37YD3pBi3PA" target="_blank" rel="noopener" class="btn btn-outline">P2 – Parking + Shuttle</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <h2 style="text-align:center" data-i18n="faq_title">FAQ</h2>
+    <div id="faq-wrap" style="max-width:900px;margin:2rem auto 0"></div>
+  </div>
+</section>
+
+<!-- SPONSORS -->
+<section class="sponsors">
+  <div class="container">
+    <h2 data-i18n="sponsors_title">Our Partners</h2>
+    <div class="sponsor-logos">
+      <img src="https://schwalbenschwanz-lounge.com/wp-content/uploads/2025/09/Langnese_Logo_invertiert.svg_-1024x841.png" alt="Langnese">
+      <img src="https://schwalbenschwanz-lounge.com/wp-content/uploads/2025/09/logo1-kbn.png" alt="KBN">
+      <img src="https://schwalbenschwanz-lounge.com/wp-content/uploads/2025/09/identitaetsverstaerker-Logo-weiss.png" alt="Identitätsverstärker">
+      <img src="https://schwalbenschwanz-lounge.com/wp-content/uploads/2025/09/KEUK_Logo_Mid2024_Wortmarke_White.png" alt="KEUK">
+      <img src="https://schwalbenschwanz-lounge.com/wp-content/uploads/2025/09/ADAC-Logo.png" alt="ADAC">
+      <img src="https://schwalbenschwanz-lounge.com/wp-content/uploads/2025/09/1642688635647.jpeg" alt="Partner">
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logos">
+          <img src="https://schwalbenschwanz-lounge.com/wp-content/uploads/2025/01/SSL_Logo.png" alt="SSL">
+          <img src="https://schwalbenschwanz-lounge.com/wp-content/uploads/2025/01/ADAC_Ravenol_24h_2024_CMYK_1c_trans.png" alt="ADAC">
+        </div>
+        <p data-i18n="footer_tagline">The exclusive VIP lounge at the 24h Nürburgring.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="contact">Contact</h4>
+        <p>RingSpirit Events</p>
+        <p>Finkenweg 24, 53424 Remagen</p>
+        <p><span data-i18n="phone">Phone</span>: <a href="tel:+491714141522">+49 171 4141522</a></p>
+        <p>E-Mail: <a href="mailto:av@ringspirit.de">av@ringspirit.de</a></p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="legal">Legal</h4>
+        <a href="https://schwalbenschwanz-lounge.com/datenschutz/" target="_blank" rel="noopener" data-i18n="privacy">Privacy Policy</a>
+        <a href="https://schwalbenschwanz-lounge.com/impressum/" target="_blank" rel="noopener" data-i18n="imprint">Imprint</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><span data-i18n="credit">This website is an</span> <a href="https://www.identitaetsverstaerker.com/de/startseite/" target="_blank" rel="noopener">Identitätsverstärker</a></p>
+      <p style="margin-top:.5rem">&copy; 2026 Schwalbenschwanz Lounge / RingSpirit Events</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ============ BOOKING URL ============
+const BOOKING_URL = "#"; // TODO: Replace with actual booking portal URL
+
+// ============ TRANSLATIONS ============
+const translations = {
+  en: {
+    book_now:"Book Now", get_tickets:"Get Tickets", learn_more:"Learn more", view_faq:"View FAQ",
+    inquire:"Inquire", free:"Free", on_request:"On request",
+    hero_title_1:"From 2026:", hero_title_2:"The real 24h feeling on two floors",
+    hero_sub:"24 hours exclusive / Best view inclusive – Experience the 24-hour race 2026 like never before!",
+    hero_date:"The 54th edition of the ADAC RAVENOL 24h Nürburgring takes place from May 14–17, 2026.",
+    teaser_title:"Experience the 24h race 2026",
+    teaser_text:"Enjoy the legendary 24-hour race 2026 in the exclusive Schwalbenschwanz Lounge. Let yourself be pampered with comfort and the best seats right in the action!",
+    organizer:"Organizer", date_label:"Date", event_dates:"May 14–17, 2026",
+    card1_title:"Book Now", card1_text:"Secure your tickets for an unforgettable racing experience!",
+    card2_title:"The Event", card2_text:"Be part of an extraordinary event and experience pure thrills!",
+    card3_title:"FAQ", card3_text:"Questions about tickets and packages? Check our FAQ!",
+    two_floors_title:"Now on two floors",
+    event_title:"The Event",
+    event_text:"Unobstructed view of the racetrack of the legendary 24-hour race at the Nürburgring in an exclusive lounge with extraordinary ambiance. The around-the-clock live broadcast on numerous screens inside the lounge, including live ranking, guarantees you won't miss a second of the spectacular race. The lounge balcony offers a direct view of the exclusive, very large videowall set up on the other side of the racetrack especially for the Schwalbenschwanz Lounge.",
+    sponsor_ad:"Your advertisement on the screens inside the lounge for all four days: €1,800",
+    countdown_title:"Race Start Countdown",
+    days:"Days", hours:"Hours", minutes:"Minutes", seconds:"Seconds",
+    tickets_title:"Tickets & Packages",
+    t1_title:"VIP Ticket (4 Days)",
+    t1_text:"4-day full access for guests over 12 to the entire track (grandstands incl. paddock) and Schwalbenschwanz Lounge (Thursday–Sunday incl. catering). Including parking and shuttle service.",
+    t2_title:"VIP Ticket Children up to 12 (4 Days)",
+    t2_text:"4-day full access for children under 12 to the entire track and Schwalbenschwanz Lounge (Thursday–Sunday) incl. catering.",
+    t3_title:"Day VIP Ticket Children up to 12",
+    t3_text:"1-day full access for children under 12 to the entire track and Schwalbenschwanz Lounge incl. catering.",
+    t4_title:"Day VIP Ticket Children up to 6",
+    t4_text:"1-day full access for children under 6. Free admission!",
+    t5_title:"Sponsoring Packages",
+    t5_text:"Take the opportunity to present your brand to a wide audience! We offer two attractive sponsoring packages!",
+    ticket_note:"Tickets are not personalized and can be transferred at any time.",
+    review_title:"Review 2025",
+    schedule_title:"Schedule",
+    note_1:"Our team takes a short pit stop on Saturday night and closes the lounge at 01:00. On Sunday from 08:00 we welcome you back warmly. On Sunday, arrival must be before 9:30 AM, as shuttle service to the VIP parking is not available again until 14:30 due to departure traffic.",
+    note_2:"Dogs are not permitted in the lounge, with the exception of guide dogs.",
+    note_3:"Tickets will be sent approximately 2–3 weeks before the event.",
+    note_4:"Track variants: GE = Full circuit incl. Nordschleife. Subject to change.",
+    venue_title:"Venue & Parking",
+    faq_title:"Frequently Asked Questions",
+    sponsors_title:"Our Partners",
+    footer_tagline:"The exclusive VIP lounge at the 24h Nürburgring.",
+    contact:"Contact", phone:"Phone", legal:"Legal",
+    privacy:"Privacy Policy", imprint:"Imprint",
+    credit:"This website is an"
+  },
+  nl: {
+    book_now:"Nu boeken", get_tickets:"Tickets kopen", learn_more:"Meer info", view_faq:"FAQ bekijken",
+    inquire:"Informeren", free:"Gratis", on_request:"Op aanvraag",
+    hero_title_1:"Vanaf 2026:", hero_title_2:"Het echte 24u-gevoel op twee verdiepingen",
+    hero_sub:"24 hours exclusive / Best view inclusive – Beleef de 24-uursrace 2026 als nooit tevoren!",
+    hero_date:"De 54e editie van de ADAC RAVENOL 24h Nürburgring vindt plaats van 14 t/m 17 mei 2026.",
+    teaser_title:"Beleef de 24u-race 2026",
+    teaser_text:"Geniet van de legendarische 24-uursrace 2026 in de exclusieve Schwalbenschwanz Lounge. Laat u verwennen met comfort en de beste plaatsen midden in het gebeuren!",
+    organizer:"Organisator", date_label:"Datum", event_dates:"14–17 mei 2026",
+    card1_title:"Nu boeken", card1_text:"Verzeker u van tickets voor een onvergetelijke race-ervaring!",
+    card2_title:"Het evenement", card2_text:"Wees onderdeel van een bijzonder evenement en ervaar pure spanning!",
+    card3_title:"FAQ", card3_text:"Vragen over tickets en pakketten? Bekijk onze FAQ!",
+    two_floors_title:"Nu op twee verdiepingen",
+    event_title:"Het evenement",
+    event_text:"Vrij zicht op het circuit van de legendarische 24-uursrace op de Nürburgring in een exclusieve lounge met een buitengewone ambiance. De 24-uurs live-uitzending op talrijke schermen in de lounge, inclusief live-klassement, garandeert dat u geen seconde van de spectaculaire race mist. Het balkon van de lounge biedt direct zicht op de exclusieve, zeer grote videowall aan de andere kant van het circuit, speciaal opgesteld voor de Schwalbenschwanz Lounge.",
+    sponsor_ad:"Uw reclame op de schermen in de lounge gedurende alle vier de dagen: €1.800",
+    countdown_title:"Aftellen tot de start",
+    days:"Dagen", hours:"Uren", minutes:"Minuten", seconds:"Seconden",
+    tickets_title:"Tickets & Pakketten",
+    t1_title:"VIP Ticket (4 Dagen)",
+    t1_text:"4-daags volledige toegang voor gasten boven 12 jaar tot het gehele circuit (tribunes incl. paddock) en Schwalbenschwanz Lounge (donderdag t/m zondag incl. catering). Inclusief parkeerplaats en shuttleservice.",
+    t2_title:"VIP Ticket Kinderen t/m 12 (4 Dagen)",
+    t2_text:"4-daags volledige toegang voor kinderen t/m 12 jaar tot het gehele circuit en Schwalbenschwanz Lounge (donderdag t/m zondag) incl. catering.",
+    t3_title:"Dag VIP Ticket Kinderen t/m 12",
+    t3_text:"1-daags volledige toegang voor kinderen t/m 12 jaar tot het gehele circuit en Schwalbenschwanz Lounge incl. catering.",
+    t4_title:"Dag VIP Ticket Kinderen t/m 6",
+    t4_text:"1-daags volledige toegang voor kinderen t/m 6 jaar. Gratis toegang!",
+    t5_title:"Sponsorpakketten",
+    t5_text:"Grijp de kans om uw merk aan een breed publiek te presenteren! Wij bieden twee aantrekkelijke sponsorpakketten!",
+    ticket_note:"Tickets zijn niet op naam en kunnen te allen tijde worden overgedragen.",
+    review_title:"Terugblik 2025",
+    schedule_title:"Tijdschema",
+    note_1:"Ons team maakt zaterdagnacht een korte pitstop en sluit de lounge om 01:00 uur. Zondag vanaf 08:00 uur verwelkomen wij u weer hartelijk. Op zondag moet de aankomst vóór 9:30 uur plaatsvinden, aangezien de shuttleservice naar de VIP-parkeerplaats pas om 14:30 uur weer beschikbaar is vanwege het vertrekkende verkeer.",
+    note_2:"Honden zijn niet toegestaan in de lounge, met uitzondering van blindengeleidehonden.",
+    note_3:"Tickets worden circa 2–3 weken voor het evenement verzonden.",
+    note_4:"Circuitvarianten: GE = Geheel circuit incl. Nordschleife. Wijzigingen voorbehouden.",
+    venue_title:"Eventlocatie & Parkeren",
+    faq_title:"Veelgestelde vragen",
+    sponsors_title:"Onze partners",
+    footer_tagline:"De exclusieve VIP-lounge bij de 24u Nürburgring.",
+    contact:"Contact", phone:"Telefoon", legal:"Juridisch",
+    privacy:"Privacybeleid", imprint:"Colofon",
+    credit:"Deze website is een"
+  }
+};
+
+// ============ SCHEDULE DATA ============
+const scheduleData = {
+  en: [
+    {day:"Thursday", items:[
+      ["12:00","OPENING – The Schwalbenschwanz Lounge opens"],
+      ["13:15–15:15","ADAC RAVENOL 24h Nürburgring, Qualifying 1, Full Circuit"],
+      ["16:15–18:15","Deutsche Historische Langstrecken-Meisterschaft, Qualifying, Full Circuit"],
+      ["20:00–23:30","ADAC RAVENOL 24h Nürburgring, Qualifying 2, Full Circuit"],
+      ["01:00","FINISH – The Schwalbenschwanz Lounge closes"]
+    ]},
+    {day:"Friday", items:[
+      ["08:00","OPENING"],
+      ["08:50–09:25","ADAC RAVENOL 24h Nürburgring, Top Qualifying 1, Full Circuit"],
+      ["09:45–10:20","ADAC RAVENOL 24h Nürburgring, Top Qualifying 2, Full Circuit"],
+      ["10:35–11:50","ADAC RAVENOL 24h Nürburgring, Qualifying 3, Full Circuit"],
+      ["13:35–14:35","ADAC RAVENOL 24h Nürburgring, Top Qualifying 3, Full Circuit"],
+      ["16:00–19:00","Deutsche Historische Langstrecken-Meisterschaft, Race, Full Circuit"],
+      ["19:30","FINISH"]
+    ]},
+    {day:"Saturday", items:[
+      ["13:00","OPENING"],
+      ["14:40","ADAC RAVENOL 24h Nürburgring, Formation Lap, Full Circuit"],
+      ["15:00","ADAC RAVENOL 24h Nürburgring, Race Start, Full Circuit"],
+      ["01:00","FINISH"]
+    ]},
+    {day:"Sunday", items:[
+      ["08:00","OPENING"],
+      ["15:00","ADAC RAVENOL 24h Nürburgring, Race Finish"],
+      ["15:30","FINISH – Lounge closes"]
+    ]}
+  ],
+  nl: [
+    {day:"Donderdag", items:[
+      ["12:00","OPENING – De Schwalbenschwanz Lounge opent"],
+      ["13:15–15:15","ADAC RAVENOL 24h Nürburgring, Kwalificatie 1, Gehele Circuit"],
+      ["16:15–18:15","Deutsche Historische Langstrecken-Meisterschaft, Kwalificatie, Gehele Circuit"],
+      ["20:00–23:30","ADAC RAVENOL 24h Nürburgring, Kwalificatie 2, Gehele Circuit"],
+      ["01:00","FINISH – De Schwalbenschwanz Lounge sluit"]
+    ]},
+    {day:"Vrijdag", items:[
+      ["08:00","OPENING"],
+      ["08:50–09:25","ADAC RAVENOL 24h Nürburgring, Top Kwalificatie 1, Gehele Circuit"],
+      ["09:45–10:20","ADAC RAVENOL 24h Nürburgring, Top Kwalificatie 2, Gehele Circuit"],
+      ["10:35–11:50","ADAC RAVENOL 24h Nürburgring, Kwalificatie 3, Gehele Circuit"],
+      ["13:35–14:35","ADAC RAVENOL 24h Nürburgring, Top Kwalificatie 3, Gehele Circuit"],
+      ["16:00–19:00","Deutsche Historische Langstrecken-Meisterschaft, Wedstrijd, Gehele Circuit"],
+      ["19:30","FINISH"]
+    ]},
+    {day:"Zaterdag", items:[
+      ["13:00","OPENING"],
+      ["14:40","ADAC RAVENOL 24h Nürburgring, Formatieronde, Gehele Circuit"],
+      ["15:00","ADAC RAVENOL 24h Nürburgring, Start Wedstrijd, Gehele Circuit"],
+      ["01:00","FINISH"]
+    ]},
+    {day:"Zondag", items:[
+      ["08:00","OPENING"],
+      ["15:00","ADAC RAVENOL 24h Nürburgring, Einde Wedstrijd"],
+      ["15:30","FINISH – Lounge sluit"]
+    ]}
+  ]
+};
+
+// ============ FAQ DATA ============
+const faqData = {
+  en: [
+    {q:"Where can I park / is there a shuttle service?",
+     a:"If you order 4 or more tickets, you receive a free parking space near the Schwalbenschwanz Lounge. From there, our exclusive shuttle service brings you to the lounge. For guests without a parking space, there will be a pickup point from which the shuttle service will take you to the lounge."},
+    {q:"Are drinks included?",
+     a:"Both the extensive BBQ buffet and all beverages are fully included in the ticket price."},
+    {q:"Are there vegan alternatives to the BBQ buffet?",
+     a:"Vegans are also catered for. Vegan alternatives to the BBQ buffet complement our extensive catering offerings."},
+    {q:"Can I transfer my ticket?",
+     a:"Purchased tickets may be transferred to another person at any time."},
+    {q:"When will I receive my ticket?",
+     a:"Approximately four weeks before the event, you will receive your exclusive entrance ticket and the accompanying welcome package, including directions, by post."},
+    {q:"What about advertising packages?",
+     a:"Our advertising packages can be booked separately!"},
+    {q:"What can I expect?",
+     a:"<ul><li>Access to the Schwalbenschwanz Lounge (Thursday–Sunday) with friendly guest service and TV track signal</li><li>Padded and covered seats in front of the lounge with the best view</li><li>Event ticket (Thursday–Sunday) incl. paddock access, pit walk, and starting grid</li><li>Sunday breakfast buffet</li><li>Daily lunch and cake buffet including beverages</li><li>Evening buffet on Thursday, Friday, and Saturday</li><li>Midnight snack on Saturday</li><li>VIP shuttle to selected Nordschleife track sections</li><li>Paddock tour</li><li>Parking included when booking 4 or more VIP tickets</li></ul>"},
+    {q:"Are dogs allowed?",
+     a:"Dogs are not permitted in the lounge, with the exception of guide dogs."},
+    {q:"I haven't received my ticket yet – when will it be sent?",
+     a:"Tickets will be sent approximately 2–3 weeks before the event."}
+  ],
+  nl: [
+    {q:"Waar kan ik parkeren / is er een shuttleservice?",
+     a:"Bij een bestelling van 4 of meer tickets ontvangt u een gratis parkeerplaats in de buurt van de Schwalbenschwanz Lounge. Vanaf daar brengt onze exclusieve shuttleservice u naar de lounge. Voor gasten zonder parkeerplaats is er een ophaalppunt vanwaar de shuttleservice u naar de lounge brengt."},
+    {q:"Zijn de dranken inbegrepen?",
+     a:"Zowel het uitgebreide barbecuebuffet als alle dranken zijn volledig inbegrepen in de ticketprijs."},
+    {q:"Zijn er veganistische alternatieven voor het BBQ-buffet?",
+     a:"Ook aan de veganisten is gedacht. Veganistische alternatieven voor het barbecuebuffet completeren ons uitgebreide cateringaanbod."},
+    {q:"Kan ik mijn ticket overdragen?",
+     a:"Gekochte tickets mogen te allen tijde aan een andere persoon worden overgedragen."},
+    {q:"Wanneer ontvang ik mijn ticket?",
+     a:"Ongeveer vier weken voor het evenement ontvangt u per post uw exclusieve toegangskaart en het bijbehorende welkomstpakket, inclusief routebeschrijving."},
+    {q:"Hoe zit het met reclamepakketten?",
+     a:"Onze reclamepakketten kunnen apart worden geboekt!"},
+    {q:"Wat kan ik verwachten?",
+     a:"<ul><li>Toegang tot de Schwalbenschwanz Lounge (donderdag t/m zondag) met vriendelijke gastbegeleiding en TV-circuitsignaal</li><li>Gestoffeerde en overdekte zitplaatsen voor de lounge met het beste uitzicht</li><li>Evenementticket (donderdag t/m zondag) incl. toegang tot de paddock, pitwalk en startopstelling</li><li>Zondags ontbijtbuffet</li><li>Dagelijks lunch- en taartbuffet inclusief dranken</li><li>Avondbuffet op donderdag, vrijdag en zaterdag</li><li>Middernachtssnack op zaterdag</li><li>VIP-shuttle naar geselecteerde baandelen van de Nordschleife</li><li>Paddocktour</li><li>Parkeerplaats inbegrepen bij boeking van 4 of meer VIP-tickets</li></ul>"},
+    {q:"Zijn honden toegestaan?",
+     a:"Honden zijn niet toegestaan in de lounge, met uitzondering van blindengeleidehonden."},
+    {q:"Ik heb mijn ticket nog niet ontvangen – wanneer wordt het verzonden?",
+     a:"Tickets worden circa 2–3 weken voor het evenement verzonden."}
+  ]
+};
+
+// ============ GALLERY IMAGES ============
+const galleryImages = [
+  "SchwalbenschwanzLounge-118-600x400.jpg","SchwalbenschwanzLounge-111-600x400.jpg",
+  "SchwalbenschwanzLounge-186-600x400.jpg","SchwalbenschwanzLounge-201-600x400.jpg",
+  "SchwalbenschwanzLounge-146-600x400.jpg","SchwalbenschwanzLounge-307-600x400.jpg",
+  "SchwalbenschwanzLounge-106-1-600x400.jpg","SchwalbenschwanzLounge-425-600x400.jpg",
+  "SchwalbenschwanzLounge-182-600x400.jpg","SchwalbenschwanzLounge-168-600x400.jpg",
+  "SchwalbenschwanzLounge-101-600x400.jpg","SchwalbenschwanzLounge-239-600x400.jpg",
+  "SchwalbenschwanzLounge-257-600x400.jpg","SchwalbenschwanzLounge-284-600x400.jpg",
+  "SchwalbenschwanzLounge-112-600x400.jpg"
+];
+
+// ============ RENDER ============
+let currentLang = 'en';
+
+function renderGallery(){
+  const g = document.getElementById('gallery');
+  g.innerHTML = galleryImages.map(f =>
+    `<img src="https://schwalbenschwanz-lounge.com/wp-content/uploads/2025/09/${f}" alt="Schwalbenschwanz Lounge" loading="lazy">`
+  ).join('');
+  g.querySelectorAll('img').forEach(img => {
+    img.addEventListener('click', () => {
+      const lb = document.getElementById('lightbox');
+      lb.querySelector('img').src = img.src;
+      lb.classList.add('active');
+    });
+  });
+  document.getElementById('lightbox').addEventListener('click', e => {
+    e.currentTarget.classList.remove('active');
+  });
+}
+
+function renderSchedule(){
+  const wrap = document.getElementById('schedule-wrap');
+  wrap.innerHTML = scheduleData[currentLang].map(d =>
+    `<div class="schedule-day"><h3>${d.day}</h3>${
+      d.items.map(i => `<div class="schedule-item"><div class="time">${i[0]}</div><div class="desc">${i[1]}</div></div>`).join('')
+    }</div>`
+  ).join('');
+}
+
+function renderFAQ(){
+  const wrap = document.getElementById('faq-wrap');
+  wrap.innerHTML = faqData[currentLang].map((f,i) =>
+    `<div class="faq-item" data-faq="${i}">
+      <div class="faq-q">${f.q}<span class="icon">+</span></div>
+      <div class="faq-a">${f.a}</div>
+    </div>`
+  ).join('');
+  wrap.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      item.classList.toggle('open');
+    });
+  });
+}
+
+function applyLang(lang){
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang][key]) el.textContent = translations[lang][key];
+  });
+  document.querySelectorAll('[data-lang-btn]').forEach(b => {
+    b.classList.toggle('active', b.getAttribute('data-lang-btn') === lang);
+  });
+  renderSchedule();
+  renderFAQ();
+}
+
+// Booking links
+function wireBooking(){
+  document.querySelectorAll('[data-booking]').forEach(el => {
+    el.setAttribute('href', BOOKING_URL);
+    if (BOOKING_URL !== "#") { el.setAttribute('target','_blank'); el.setAttribute('rel','noopener'); }
+  });
+}
+
+// Countdown
+function startCountdown(){
+  const target = new Date('2026-05-14T15:00:00+02:00').getTime();
+  function tick(){
+    const now = Date.now();
+    const diff = Math.max(0, target - now);
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('cd-days').textContent = d;
+    document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
+    document.getElementById('cd-mins').textContent = String(m).padStart(2,'0');
+    document.getElementById('cd-secs').textContent = String(s).padStart(2,'0');
+  }
+  tick();
+  setInterval(tick, 1000);
+}
+
+// Init
+document.querySelectorAll('[data-lang-btn]').forEach(btn => {
+  btn.addEventListener('click', () => applyLang(btn.getAttribute('data-lang-btn')));
+});
+
+renderGallery();
+wireBooking();
+applyLang('en');
+startCountdown();
+</script>
+</body>
+</html>
