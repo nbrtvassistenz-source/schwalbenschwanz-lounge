@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -171,6 +170,49 @@ header{
   color:var(--gold);line-height:1;
 }
 .trust-stat .label{color:var(--muted);font-size:.85rem;text-transform:uppercase;letter-spacing:1.5px;margin-top:.3rem}
+
+/* RACING FEATURE STRIP (atmos-8 + atmos-9) */
+.racing-strip{
+  background:#000;padding:0;position:relative;
+}
+.racing-strip-inner{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  min-height:560px;
+}
+.racing-tile{
+  position:relative;overflow:hidden;
+  background-size:cover;background-position:center;
+  display:flex;align-items:flex-end;
+  min-height:560px;
+}
+.racing-tile::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,.2) 50%,transparent 100%);
+}
+.racing-tile .label{
+  position:relative;z-index:2;padding:3rem 2.5rem;color:#fff;
+}
+.racing-tile .kicker{
+  font-family:'Montserrat',sans-serif;font-size:.75rem;letter-spacing:3px;
+  text-transform:uppercase;color:var(--gold);margin-bottom:.7rem;
+}
+.racing-tile h3{
+  font-family:'Montserrat',sans-serif;font-size:1.7rem;color:#fff;line-height:1.2;
+  margin-bottom:.5rem;font-weight:700;
+}
+.racing-tile p{color:rgba(255,255,255,.85);font-size:1rem;max-width:380px;line-height:1.6}
+.racing-tile.left{background-image:url('./assets/atmos-8.jpg')}
+.racing-tile.right{background-image:url('./assets/atmos-9.jpg')}
+.racing-tile:hover{cursor:default}
+.racing-tile.left::after, .racing-tile.right::after{
+  content:'';position:absolute;inset:0;background:transparent;transition:background .5s;
+}
+@media(max-width:768px){
+  .racing-strip-inner{grid-template-columns:1fr}
+  .racing-tile{min-height:380px}
+  .racing-tile h3{font-size:1.3rem}
+  .racing-tile .label{padding:2rem 1.5rem}
+}
 
 /* TESTIMONIALS */
 .testimonials{background:var(--bg2);padding:5rem 0}
@@ -420,6 +462,26 @@ footer{
   </div>
 </div>
 
+<!-- RACING FEATURE STRIP -->
+<section class="racing-strip">
+  <div class="racing-strip-inner">
+    <div class="racing-tile left">
+      <div class="label">
+        <div class="kicker" data-i18n="strip_kicker1">On the limit</div>
+        <h3 data-i18n="strip_t1">73 corners. 25.4 kilometers. One mistake.</h3>
+        <p data-i18n="strip_p1">The Nordschleife doesn't forgive — and that's exactly why we watch.</p>
+      </div>
+    </div>
+    <div class="racing-tile right">
+      <div class="label">
+        <div class="kicker" data-i18n="strip_kicker2">Wheel to wheel</div>
+        <h3 data-i18n="strip_t2">Front-row seat to the most demanding 24h race in the world.</h3>
+        <p data-i18n="strip_p2">From the formation lap on Saturday to Sunday afternoon — every overtake, every pit stop, every moment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- TEASER -->
 <section>
   <div class="container teaser">
@@ -538,7 +600,7 @@ footer{
         <p data-i18n="testi2_q">"We came as a group of six and it felt like a private event. The lounge balcony directly opposite the videowall is something I haven't seen anywhere else at the Ring. Booking again for 2026."</p>
         <div class="author">
           <div class="avatar">SV</div>
-          <div><div class="who">Sandra V.</div><div class="whence" data-i18n="testi2_w">Returning guest, 2024 & 2025</div></div>
+          <div><div class="who">Sandra V.</div><div class="whence" data-i18n="testi2_w">VIP guest, 2025 (booking again for 2026)</div></div>
         </div>
       </div>
       <div class="testi">
@@ -584,18 +646,6 @@ footer{
         <h3 data-i18n="t2_title">VIP Ticket Children up to 12 (4 Days)</h3>
         <div class="price">€800 <span style="font-size:.9rem;color:var(--muted)">net</span></div>
         <p data-i18n="t2_text">4-day full access for children under 12 to the entire track and Schwalbenschwanz Lounge (Thursday–Sunday) incl. catering.</p>
-        <a href="#" class="btn" data-booking data-i18n="book_now">Book Now</a>
-      </div>
-      <div class="ticket">
-        <h3 data-i18n="t3_title">Day VIP Ticket Children up to 12</h3>
-        <div class="price">€200 <span style="font-size:.9rem;color:var(--muted)">net</span></div>
-        <p data-i18n="t3_text">1-day full access for children under 12 to the entire track and Schwalbenschwanz Lounge incl. catering.</p>
-        <a href="#" class="btn" data-booking data-i18n="book_now">Book Now</a>
-      </div>
-      <div class="ticket">
-        <h3 data-i18n="t4_title">Day VIP Ticket Children up to 6</h3>
-        <div class="price" data-i18n="free">Free</div>
-        <p data-i18n="t4_text">1-day full access for children under 6. Free admission!</p>
         <a href="#" class="btn" data-booking data-i18n="book_now">Book Now</a>
       </div>
       <div class="ticket">
@@ -724,12 +774,18 @@ const translations = {
     atmos_title:"Pure Nürburgring Atmosphere",
     atmos_sub:"200,000+ fans. Legendary corners. The most demanding race in the world — and you in the front row.",
     stat1:"Floors of Lounge", stat2:"All Inclusive", stat3:"Fans on Site", stat4:"Full Circuit",
+    strip_kicker1:"On the limit",
+    strip_t1:"73 corners. 25.4 kilometers. One mistake.",
+    strip_p1:"The Nordschleife doesn't forgive — and that's exactly why we watch.",
+    strip_kicker2:"Wheel to wheel",
+    strip_t2:"Front-row seat to the most demanding 24h race in the world.",
+    strip_p2:"From the formation lap on Saturday to Sunday afternoon — every overtake, every pit stop, every moment.",
     testi_title:"What our 2025 guests said",
     testi_sub:"Honest words from people who experienced the Schwalbenschwanz Lounge first-hand.",
     testi1_q:"\"Best decision we made all year. The view of the track is unmatched, the catering is genuinely premium, and the team thinks of every detail. We were back in the lounge within minutes thanks to the shuttle — zero stress.\"",
     testi1_w:"VIP guest, 24h Nürburgring 2025",
     testi2_q:"\"We came as a group of six and it felt like a private event. The lounge balcony directly opposite the videowall is something I haven't seen anywhere else at the Ring. Booking again for 2026.\"",
-    testi2_w:"Returning guest, 2024 & 2025",
+    testi2_w:"VIP guest, 2025 (booking again for 2026)",
     testi3_q:"\"As a long-time 24h fan I was sceptical about VIP packages. The Schwalbenschwanz proved me wrong — the access, the food, the atmosphere. Worth every euro.\"",
     testi3_w:"VIP guest 2025, Netherlands",
     hero_title_1:"From 2026:", hero_title_2:"The real 24h feeling on two floors",
@@ -784,12 +840,18 @@ const translations = {
     atmos_title:"Pure Nürburgring sfeer",
     atmos_sub:"200.000+ fans. Legendarische bochten. De zwaarste race ter wereld — en u op de eerste rij.",
     stat1:"Verdiepingen lounge", stat2:"All-Inclusive", stat3:"Fans op locatie", stat4:"Heel circuit",
+    strip_kicker1:"Op de limiet",
+    strip_t1:"73 bochten. 25,4 kilometer. Eén fout.",
+    strip_p1:"De Nordschleife vergeeft niets — en juist daarom kijken we.",
+    strip_kicker2:"Wiel aan wiel",
+    strip_t2:"Eerste rij bij de zwaarste 24-uursrace ter wereld.",
+    strip_p2:"Van de formatieronde op zaterdag tot zondagmiddag — elke inhaalactie, elke pitstop, elk moment.",
     testi_title:"Wat onze gasten van 2025 zeiden",
     testi_sub:"Eerlijke woorden van mensen die de Schwalbenschwanz Lounge zelf hebben beleefd.",
     testi1_q:"\"Beste beslissing van het hele jaar. Het uitzicht op het circuit is ongeëvenaard, de catering écht premium, en het team denkt aan elk detail. Dankzij de shuttle waren we binnen enkele minuten weer in de lounge — geen gedoe.\"",
     testi1_w:"VIP-gast, 24u Nürburgring 2025",
     testi2_q:"\"We kwamen met zes mensen en het voelde als een privé-event. Het balkon van de lounge recht tegenover de videowall heb ik nergens anders bij de Ring gezien. We boeken zeker weer voor 2026.\"",
-    testi2_w:"Terugkerende gast, 2024 & 2025",
+    testi2_w:"VIP-gast 2025, boekt opnieuw voor 2026",
     testi3_q:"\"Als jarenlange 24u-fan was ik sceptisch over VIP-pakketten. De Schwalbenschwanz heeft me overtuigd — de toegang, het eten, de sfeer. Elke euro waard.\"",
     testi3_w:"VIP-gast 2025, Nederland",
     hero_title_1:"Vanaf 2026:", hero_title_2:"Het echte 24u-gevoel op twee verdiepingen",
