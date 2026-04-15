@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,14 +83,125 @@ header{
 
 /* HERO */
 .hero{
-  min-height:90vh;
+  min-height:92vh;
   display:flex;align-items:center;justify-content:center;
   text-align:center;
   background:
-    linear-gradient(rgba(10,10,10,.75),rgba(10,10,10,.85)),
-    url('https://schwalbenschwanz-lounge.com/wp-content/uploads/2025/09/SchwalbenschwanzLounge-118-600x400.jpg') center/cover;
+    linear-gradient(rgba(10,10,10,.55),rgba(10,10,10,.92)),
+    url('https://files.catbox.moe/0kbfnq.jpeg') center/cover;
   padding:4rem 1.5rem;
+  position:relative;
 }
+.hero::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:120px;
+  background:linear-gradient(to bottom,transparent,var(--bg));pointer-events:none;
+}
+.hero .container{position:relative;z-index:2}
+.hero .badge{
+  display:inline-block;background:rgba(201,168,76,.15);border:1px solid var(--gold);
+  color:var(--gold);padding:.4rem 1rem;border-radius:50px;
+  font-size:.8rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:1.5rem;
+}
+
+/* USP ROW */
+.usp-row{
+  background:var(--bg2);padding:3rem 0;border-bottom:1px solid var(--border);
+}
+.usp-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;
+  max-width:1200px;margin:0 auto;padding:0 1.5rem;
+}
+.usp{text-align:center}
+.usp .icon{
+  font-size:2.5rem;color:var(--gold);margin-bottom:.7rem;line-height:1;
+}
+.usp h4{font-family:'Montserrat',sans-serif;color:#fff;margin-bottom:.4rem;font-size:1rem;letter-spacing:1px;text-transform:uppercase}
+.usp p{color:var(--muted);font-size:.9rem}
+
+/* ATMOSPHERE */
+.atmosphere{background:#000;padding:5rem 0}
+.atmosphere h2{text-align:center}
+.atmosphere-sub{text-align:center;color:var(--muted);max-width:700px;margin:.5rem auto 3rem;font-size:1.1rem}
+.atmos-grid{
+  display:grid;grid-template-columns:repeat(12,1fr);gap:.6rem;
+  max-width:1400px;margin:0 auto;padding:0 1rem;
+}
+.atmos-grid figure{margin:0;overflow:hidden;border-radius:6px;position:relative;cursor:pointer}
+.atmos-grid img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.atmos-grid figure:hover img{transform:scale(1.06)}
+.atmos-grid figure:nth-child(1){grid-column:span 6;height:380px}
+.atmos-grid figure:nth-child(2){grid-column:span 3;height:380px}
+.atmos-grid figure:nth-child(3){grid-column:span 3;height:380px}
+.atmos-grid figure:nth-child(4){grid-column:span 4;height:300px}
+.atmos-grid figure:nth-child(5){grid-column:span 4;height:300px}
+.atmos-grid figure:nth-child(6){grid-column:span 4;height:300px}
+.atmos-grid figure:nth-child(7){grid-column:span 12;height:420px}
+@media(max-width:768px){
+  .atmos-grid figure{grid-column:span 12 !important;height:240px !important}
+}
+
+/* TICKET BADGES */
+.ticket{position:relative}
+.ticket-badge{
+  position:absolute;top:-12px;right:1rem;
+  background:var(--gold);color:#0a0a0a;
+  font-family:'Montserrat',sans-serif;font-weight:700;
+  font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;
+  padding:.35rem .8rem;border-radius:3px;
+  box-shadow:0 4px 12px rgba(201,168,76,.4);
+}
+.ticket.featured{
+  border-color:var(--gold);
+  background:linear-gradient(180deg,rgba(201,168,76,.08) 0%,var(--bg2) 80%);
+  transform:translateY(-5px);
+}
+
+/* TRUST BAR */
+.trust-bar{
+  background:var(--bg3);padding:2.5rem 0;text-align:center;
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+}
+.trust-bar .stats{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem;
+  max-width:1100px;margin:0 auto;padding:0 1.5rem;
+}
+.trust-stat .num{
+  font-family:'Montserrat',sans-serif;font-size:2.8rem;font-weight:800;
+  color:var(--gold);line-height:1;
+}
+.trust-stat .label{color:var(--muted);font-size:.85rem;text-transform:uppercase;letter-spacing:1.5px;margin-top:.3rem}
+
+/* TESTIMONIALS */
+.testimonials{background:var(--bg2);padding:5rem 0}
+.testimonials h2{text-align:center;margin-bottom:.5rem}
+.testimonials-sub{text-align:center;color:var(--muted);max-width:600px;margin:0 auto 3rem;font-size:1.05rem}
+.testi-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.5rem;
+  max-width:1200px;margin:0 auto;padding:0 1.5rem;
+}
+.testi{
+  background:var(--bg);border:1px solid var(--border);border-radius:8px;
+  padding:2rem;position:relative;transition:border-color .3s,transform .3s;
+}
+.testi:hover{border-color:var(--gold);transform:translateY(-3px)}
+.testi::before{
+  content:'"';position:absolute;top:-15px;left:1.5rem;
+  font-family:Georgia,serif;font-size:5rem;color:var(--gold);line-height:1;
+}
+.testi p{color:var(--text);font-style:italic;font-size:1rem;line-height:1.7;margin-bottom:1.5rem;margin-top:.5rem}
+.testi .stars{color:var(--gold);font-size:1rem;letter-spacing:3px;margin-bottom:.7rem}
+.testi .author{
+  display:flex;align-items:center;gap:.8rem;border-top:1px solid var(--border);padding-top:1rem;
+}
+.testi .avatar{
+  width:42px;height:42px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),var(--gold-soft));
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Montserrat',sans-serif;font-weight:700;color:#0a0a0a;
+}
+.testi .who{font-family:'Montserrat',sans-serif;color:#fff;font-weight:600;font-size:.95rem}
+.testi .whence{color:var(--muted);font-size:.8rem}
 .hero h1{color:#fff;margin-bottom:1rem}
 .hero h1 span{color:var(--gold);display:block;margin-top:.3rem}
 .hero .sub{font-size:clamp(1.1rem,2vw,1.4rem);color:var(--muted);margin-bottom:1.5rem;max-width:820px;margin-left:auto;margin-right:auto}
@@ -114,22 +226,20 @@ header{
 
 /* TWO FLOORS / VIDEO */
 .two-floors{text-align:center;background:var(--bg2)}
-.video-thumb{
-  position:relative;max-width:900px;margin:2rem auto 0;cursor:pointer;
-  border:2px solid var(--gold);border-radius:8px;overflow:hidden;transition:transform .3s;
+.two-floors-sub{color:var(--muted);font-size:1.1rem;max-width:700px;margin:.5rem auto 2rem}
+.lounge-2026{
+  display:grid;grid-template-columns:1fr 1fr;gap:1rem;
+  max-width:1100px;margin:1.5rem auto;
 }
-.video-thumb:hover{transform:scale(1.02)}
-.video-thumb img{width:100%;display:block}
-.play-btn{
-  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-  width:90px;height:90px;border-radius:50%;
-  background:rgba(201,168,76,.92);
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 0 40px rgba(201,168,76,.6);
+.lounge-2026 img{
+  width:100%;height:100%;object-fit:cover;aspect-ratio:16/10;
+  border:2px solid var(--gold);border-radius:8px;
+  box-shadow:0 10px 40px rgba(0,0,0,.5);
 }
-.play-btn::before{
-  content:'';border-left:28px solid #0a0a0a;
-  border-top:18px solid transparent;border-bottom:18px solid transparent;margin-left:6px;
+.video-wrap{max-width:1100px;margin:2rem auto 0;border:2px solid var(--gold);border-radius:8px;overflow:hidden;background:#000}
+.video-wrap video{width:100%;display:block;max-height:620px}
+@media(max-width:640px){
+  .lounge-2026{grid-template-columns:1fr}
 }
 
 /* EVENT */
@@ -292,12 +402,23 @@ footer{
 <!-- HERO -->
 <section class="hero">
   <div class="container">
+    <span class="badge" data-i18n="hero_badge">14–17 May 2026 · Nürburgring</span>
     <h1 data-i18n="hero_title_1">From 2026:<span data-i18n="hero_title_2">The real 24h feeling on two floors</span></h1>
     <p class="sub" data-i18n="hero_sub">24 hours exclusive / Best view inclusive – Experience the 24-hour race 2026 like never before!</p>
     <p class="date-note" data-i18n="hero_date">The 54th edition of the ADAC RAVENOL 24h Nürburgring takes place from May 14–17, 2026.</p>
-    <a href="#" class="btn" data-booking data-i18n="get_tickets">Get Tickets</a>
+    <a href="#" class="btn" data-booking data-i18n="get_tickets">Reserve your seat</a>
   </div>
 </section>
+
+<!-- USP ROW -->
+<div class="usp-row">
+  <div class="usp-grid">
+    <div class="usp"><div class="icon">▲</div><h4 data-i18n="usp1_t">Two Floors</h4><p data-i18n="usp1_d">Doubled lounge space — premium views from both levels.</p></div>
+    <div class="usp"><div class="icon">●</div><h4 data-i18n="usp2_t">All Inclusive</h4><p data-i18n="usp2_d">BBQ buffet, drinks & catering — fully covered, all 4 days.</p></div>
+    <div class="usp"><div class="icon">◆</div><h4 data-i18n="usp3_t">Best View</h4><p data-i18n="usp3_d">Direct trackside, exclusive videowall, paddock access.</p></div>
+    <div class="usp"><div class="icon">★</div><h4 data-i18n="usp4_t">VIP Comfort</h4><p data-i18n="usp4_d">Padded covered seats, parking + private shuttle.</p></div>
+  </div>
+</div>
 
 <!-- TEASER -->
 <section>
@@ -339,11 +460,22 @@ footer{
 <section class="two-floors">
   <div class="container">
     <h2 data-i18n="two_floors_title">Now on two floors</h2>
-    <a href="#" class="btn" data-booking data-i18n="get_tickets">Get Tickets</a>
-    <a href="https://schwalbenschwanz-lounge.com/wp-content/uploads/2025/11/Trailer_2026_V03.mp4" target="_blank" rel="noopener" class="video-thumb">
-      <img src="https://schwalbenschwanz-lounge.com/wp-content/uploads/2025/11/Bildschirmfoto-2025-11-11-um-14.54.28.png" alt="Trailer 2026">
-      <div class="play-btn"></div>
-    </a>
+    <p class="two-floors-sub" data-i18n="two_floors_sub">See the 2026 lounge — two full floors, premium finish.</p>
+
+    <!-- 2026 LOUNGE IMAGES (replace src with real URLs) -->
+    <div class="lounge-2026">
+      <img src="https://files.catbox.moe/fi8xbe.jpeg" alt="Schwalbenschwanz Lounge 2026 – exterior with stairs and KBN branding">
+      <img src="https://files.catbox.moe/0kbfnq.jpeg" alt="Schwalbenschwanz Lounge 2026 – two-storey front with checkered flag design">
+    </div>
+
+    <!-- INLINE VIDEO -->
+    <div class="video-wrap">
+      <video controls preload="metadata" playsinline poster="https://schwalbenschwanz-lounge.com/wp-content/uploads/2025/09/SchwalbenschwanzLounge-118-600x400.jpg">
+        <source src="https://files.catbox.moe/z2b3rd.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <a href="#" class="btn" data-booking data-i18n="get_tickets" style="margin-top:2rem">Get Tickets</a>
   </div>
 </section>
 
@@ -356,6 +488,67 @@ footer{
     <p data-i18n="event_text">Unobstructed view of the racetrack of the legendary 24-hour race at the Nürburgring in an exclusive lounge with extraordinary ambiance. The around-the-clock live broadcast on numerous screens inside the lounge, including live ranking, guarantees you won't miss a second of the spectacular race. The lounge balcony offers a direct view of the exclusive, very large videowall set up on the other side of the racetrack especially for the Schwalbenschwanz Lounge.</p>
     <div class="sponsor-box">
       <p data-i18n="sponsor_ad"><strong>Your advertisement on the screens inside the lounge for all four days: €1,800</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ATMOSPHERE -->
+<section class="atmosphere">
+  <div class="container">
+    <h2 data-i18n="atmos_title">Pure Nürburgring Atmosphere</h2>
+    <p class="atmosphere-sub" data-i18n="atmos_sub">200,000+ fans. Legendary corners. The most demanding race in the world — and you in the front row.</p>
+  </div>
+  <div class="atmos-grid">
+    <figure><img src="https://files.catbox.moe/h8ng6u.jpg" alt="Nürburgring 24h atmosphere" loading="lazy"></figure>
+    <figure><img src="https://files.catbox.moe/qx2vef.jpg" alt="Nürburgring entrance" loading="lazy"></figure>
+    <figure><img src="https://files.catbox.moe/7wkpec.jpg" alt="Nordschleife corner" loading="lazy"></figure>
+    <figure><img src="https://files.catbox.moe/7ghlik.jpg" alt="Packed grandstand" loading="lazy"></figure>
+    <figure><img src="https://files.catbox.moe/rmhax2.jpg" alt="Starting grid crowd" loading="lazy"></figure>
+    <figure><img src="https://files.catbox.moe/cgnisz.jpg" alt="Fans cheering on cars with flares" loading="lazy"></figure>
+    <figure><img src="https://files.catbox.moe/rohocv.jpg" alt="Race car at sunset on the Nordschleife" loading="lazy"></figure>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="stats">
+    <div class="trust-stat"><div class="num">2</div><div class="label" data-i18n="stat1">Floors of Lounge</div></div>
+    <div class="trust-stat"><div class="num">96h</div><div class="label" data-i18n="stat2">All Inclusive</div></div>
+    <div class="trust-stat"><div class="num">200K+</div><div class="label" data-i18n="stat3">Fans on Site</div></div>
+    <div class="trust-stat"><div class="num">25.4 km</div><div class="label" data-i18n="stat4">Full Circuit</div></div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS — REPLACE WITH REAL 2025 GUEST QUOTES -->
+<section class="testimonials">
+  <div class="container">
+    <h2 data-i18n="testi_title">What our 2025 guests said</h2>
+    <p class="testimonials-sub" data-i18n="testi_sub">Honest words from people who experienced the Schwalbenschwanz Lounge first-hand.</p>
+    <div class="testi-grid">
+      <div class="testi">
+        <div class="stars">★★★★★</div>
+        <p data-i18n="testi1_q">"Best decision we made all year. The view of the track is unmatched, the catering is genuinely premium, and the team thinks of every detail. We were back in the lounge within minutes thanks to the shuttle — zero stress."</p>
+        <div class="author">
+          <div class="avatar">MK</div>
+          <div><div class="who">Markus K.</div><div class="whence" data-i18n="testi1_w">VIP guest, 24h Nürburgring 2025</div></div>
+        </div>
+      </div>
+      <div class="testi">
+        <div class="stars">★★★★★</div>
+        <p data-i18n="testi2_q">"We came as a group of six and it felt like a private event. The lounge balcony directly opposite the videowall is something I haven't seen anywhere else at the Ring. Booking again for 2026."</p>
+        <div class="author">
+          <div class="avatar">SV</div>
+          <div><div class="who">Sandra V.</div><div class="whence" data-i18n="testi2_w">Returning guest, 2024 & 2025</div></div>
+        </div>
+      </div>
+      <div class="testi">
+        <div class="stars">★★★★★</div>
+        <p data-i18n="testi3_q">"As a long-time 24h fan I was sceptical about VIP packages. The Schwalbenschwanz proved me wrong — the access, the food, the atmosphere. Worth every euro."</p>
+        <div class="author">
+          <div class="avatar">JD</div>
+          <div><div class="who">Joost D.</div><div class="whence" data-i18n="testi3_w">VIP guest 2025, Netherlands</div></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -380,7 +573,8 @@ footer{
   <div class="container">
     <h2 style="text-align:center" data-i18n="tickets_title">Tickets & Packages</h2>
     <div class="tickets">
-      <div class="ticket">
+      <div class="ticket featured">
+        <span class="ticket-badge" data-i18n="popular">Most Popular</span>
         <h3 data-i18n="t1_title">VIP Ticket (4 Days)</h3>
         <div class="price">€1,500 <span style="font-size:.9rem;color:var(--muted)">net</span></div>
         <p data-i18n="t1_text">4-day full access for guests over 12 to the entire track (grandstands incl. paddock) and Schwalbenschwanz Lounge (Thursday–Sunday incl. catering). Including parking and shuttle service.</p>
@@ -520,8 +714,24 @@ const BOOKING_URL = "#"; // TODO: Replace with actual booking portal URL
 // ============ TRANSLATIONS ============
 const translations = {
   en: {
-    book_now:"Book Now", get_tickets:"Get Tickets", learn_more:"Learn more", view_faq:"View FAQ",
-    inquire:"Inquire", free:"Free", on_request:"On request",
+    book_now:"Book Now", get_tickets:"Reserve your seat", learn_more:"Learn more", view_faq:"View FAQ",
+    inquire:"Inquire", free:"Free", on_request:"On request", popular:"Most Popular",
+    hero_badge:"14–17 May 2026 · Nürburgring",
+    usp1_t:"Two Floors", usp1_d:"Doubled lounge space — premium views from both levels.",
+    usp2_t:"All Inclusive", usp2_d:"BBQ buffet, drinks & catering — fully covered, all 4 days.",
+    usp3_t:"Best View", usp3_d:"Direct trackside, exclusive videowall, paddock access.",
+    usp4_t:"VIP Comfort", usp4_d:"Padded covered seats, parking + private shuttle.",
+    atmos_title:"Pure Nürburgring Atmosphere",
+    atmos_sub:"200,000+ fans. Legendary corners. The most demanding race in the world — and you in the front row.",
+    stat1:"Floors of Lounge", stat2:"All Inclusive", stat3:"Fans on Site", stat4:"Full Circuit",
+    testi_title:"What our 2025 guests said",
+    testi_sub:"Honest words from people who experienced the Schwalbenschwanz Lounge first-hand.",
+    testi1_q:"\"Best decision we made all year. The view of the track is unmatched, the catering is genuinely premium, and the team thinks of every detail. We were back in the lounge within minutes thanks to the shuttle — zero stress.\"",
+    testi1_w:"VIP guest, 24h Nürburgring 2025",
+    testi2_q:"\"We came as a group of six and it felt like a private event. The lounge balcony directly opposite the videowall is something I haven't seen anywhere else at the Ring. Booking again for 2026.\"",
+    testi2_w:"Returning guest, 2024 & 2025",
+    testi3_q:"\"As a long-time 24h fan I was sceptical about VIP packages. The Schwalbenschwanz proved me wrong — the access, the food, the atmosphere. Worth every euro.\"",
+    testi3_w:"VIP guest 2025, Netherlands",
     hero_title_1:"From 2026:", hero_title_2:"The real 24h feeling on two floors",
     hero_sub:"24 hours exclusive / Best view inclusive – Experience the 24-hour race 2026 like never before!",
     hero_date:"The 54th edition of the ADAC RAVENOL 24h Nürburgring takes place from May 14–17, 2026.",
@@ -531,7 +741,7 @@ const translations = {
     card1_title:"Book Now", card1_text:"Secure your tickets for an unforgettable racing experience!",
     card2_title:"The Event", card2_text:"Be part of an extraordinary event and experience pure thrills!",
     card3_title:"FAQ", card3_text:"Questions about tickets and packages? Check our FAQ!",
-    two_floors_title:"Now on two floors",
+    two_floors_title:"Now on two floors", two_floors_sub:"See the 2026 lounge — two full floors, premium finish.",
     event_title:"The Event",
     event_text:"Unobstructed view of the racetrack of the legendary 24-hour race at the Nürburgring in an exclusive lounge with extraordinary ambiance. The around-the-clock live broadcast on numerous screens inside the lounge, including live ranking, guarantees you won't miss a second of the spectacular race. The lounge balcony offers a direct view of the exclusive, very large videowall set up on the other side of the racetrack especially for the Schwalbenschwanz Lounge.",
     sponsor_ad:"Your advertisement on the screens inside the lounge for all four days: €1,800",
@@ -564,8 +774,24 @@ const translations = {
     credit:"This website is an"
   },
   nl: {
-    book_now:"Nu boeken", get_tickets:"Tickets kopen", learn_more:"Meer info", view_faq:"FAQ bekijken",
-    inquire:"Informeren", free:"Gratis", on_request:"Op aanvraag",
+    book_now:"Nu boeken", get_tickets:"Reserveer uw plaats", learn_more:"Meer info", view_faq:"FAQ bekijken",
+    inquire:"Informeren", free:"Gratis", on_request:"Op aanvraag", popular:"Meest gekozen",
+    hero_badge:"14–17 mei 2026 · Nürburgring",
+    usp1_t:"Twee verdiepingen", usp1_d:"Verdubbelde loungeruimte — premium uitzicht op beide niveaus.",
+    usp2_t:"Alles inbegrepen", usp2_d:"BBQ-buffet, dranken & catering — volledig inbegrepen, alle 4 dagen.",
+    usp3_t:"Beste uitzicht", usp3_d:"Direct aan het circuit, exclusieve videowall, paddock-toegang.",
+    usp4_t:"VIP Comfort", usp4_d:"Gestoffeerde overdekte zitplaatsen, parkeerplaats + privé-shuttle.",
+    atmos_title:"Pure Nürburgring sfeer",
+    atmos_sub:"200.000+ fans. Legendarische bochten. De zwaarste race ter wereld — en u op de eerste rij.",
+    stat1:"Verdiepingen lounge", stat2:"All-Inclusive", stat3:"Fans op locatie", stat4:"Heel circuit",
+    testi_title:"Wat onze gasten van 2025 zeiden",
+    testi_sub:"Eerlijke woorden van mensen die de Schwalbenschwanz Lounge zelf hebben beleefd.",
+    testi1_q:"\"Beste beslissing van het hele jaar. Het uitzicht op het circuit is ongeëvenaard, de catering écht premium, en het team denkt aan elk detail. Dankzij de shuttle waren we binnen enkele minuten weer in de lounge — geen gedoe.\"",
+    testi1_w:"VIP-gast, 24u Nürburgring 2025",
+    testi2_q:"\"We kwamen met zes mensen en het voelde als een privé-event. Het balkon van de lounge recht tegenover de videowall heb ik nergens anders bij de Ring gezien. We boeken zeker weer voor 2026.\"",
+    testi2_w:"Terugkerende gast, 2024 & 2025",
+    testi3_q:"\"Als jarenlange 24u-fan was ik sceptisch over VIP-pakketten. De Schwalbenschwanz heeft me overtuigd — de toegang, het eten, de sfeer. Elke euro waard.\"",
+    testi3_w:"VIP-gast 2025, Nederland",
     hero_title_1:"Vanaf 2026:", hero_title_2:"Het echte 24u-gevoel op twee verdiepingen",
     hero_sub:"24 hours exclusive / Best view inclusive – Beleef de 24-uursrace 2026 als nooit tevoren!",
     hero_date:"De 54e editie van de ADAC RAVENOL 24h Nürburgring vindt plaats van 14 t/m 17 mei 2026.",
@@ -575,7 +801,7 @@ const translations = {
     card1_title:"Nu boeken", card1_text:"Verzeker u van tickets voor een onvergetelijke race-ervaring!",
     card2_title:"Het evenement", card2_text:"Wees onderdeel van een bijzonder evenement en ervaar pure spanning!",
     card3_title:"FAQ", card3_text:"Vragen over tickets en pakketten? Bekijk onze FAQ!",
-    two_floors_title:"Nu op twee verdiepingen",
+    two_floors_title:"Nu op twee verdiepingen", two_floors_sub:"Bekijk de lounge in 2026 — twee volledige verdiepingen, premium afwerking.",
     event_title:"Het evenement",
     event_text:"Vrij zicht op het circuit van de legendarische 24-uursrace op de Nürburgring in een exclusieve lounge met een buitengewone ambiance. De 24-uurs live-uitzending op talrijke schermen in de lounge, inclusief live-klassement, garandeert dat u geen seconde van de spectaculaire race mist. Het balkon van de lounge biedt direct zicht op de exclusieve, zeer grote videowall aan de andere kant van het circuit, speciaal opgesteld voor de Schwalbenschwanz Lounge.",
     sponsor_ad:"Uw reclame op de schermen in de lounge gedurende alle vier de dagen: €1.800",
