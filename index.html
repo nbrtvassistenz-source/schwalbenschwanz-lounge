@@ -665,6 +665,223 @@ footer{
   .header-actions{gap:.5rem}
   .btn-header{display:none}
 }
+
+/* ============================================
+   COMPREHENSIVE MOBILE OPTIMIZATION
+   ============================================ */
+
+/* Sticky-header anchor scroll offset */
+html{scroll-padding-top:80px}
+
+/* MOBILE STICKY BOTTOM CTA BAR */
+.mobile-cta{
+  display:none;
+  position:fixed;bottom:0;left:0;right:0;z-index:90;
+  background:rgba(10,10,10,.96);
+  backdrop-filter:blur(14px);
+  border-top:1px solid var(--gold);
+  padding:.7rem 1rem;
+  box-shadow:0 -8px 24px rgba(0,0,0,.5);
+}
+.mobile-cta a{
+  display:flex;align-items:center;justify-content:center;
+  background:var(--gold);color:#0a0a0a;
+  padding:.95rem 1rem;border-radius:6px;
+  font-family:'Montserrat',sans-serif;font-weight:700;
+  text-transform:uppercase;letter-spacing:1.5px;font-size:.9rem;
+  width:100%;text-decoration:none;
+  box-shadow:0 4px 16px rgba(201,168,76,.3);
+  min-height:50px;
+}
+.mobile-cta .price-hint{
+  font-size:.7rem;font-weight:500;letter-spacing:1px;
+  color:var(--muted);text-align:center;margin-top:.3rem;
+  text-transform:uppercase;
+}
+
+/* Push body content above sticky CTA on mobile */
+@media(max-width:768px){
+  .mobile-cta{display:block}
+  body{padding-bottom:90px}
+  footer{padding-bottom:5rem}
+}
+
+/* GLOBAL MOBILE TUNING */
+@media(max-width:768px){
+  /* Tighter section padding */
+  section{padding:3rem 0}
+  .container{padding:0 1.2rem}
+
+  /* Headlines scale down */
+  h2{font-size:1.55rem;line-height:1.25}
+  h3{font-size:1.15rem}
+
+  /* HERO */
+  .hero{min-height:auto;padding:5rem 1.2rem 4rem}
+  .hero h1{font-size:2rem;line-height:1.15}
+  .hero .badge{font-size:.65rem;letter-spacing:1.5px;padding:.3rem .8rem;margin-bottom:1rem}
+  .hero .sub{font-size:.95rem;line-height:1.55;margin-bottom:1.2rem}
+  .hero .date-note{font-size:.85rem;margin-bottom:1.5rem}
+  .hero::after{height:60px}
+
+  /* USP ROW */
+  .usp-row{padding:2rem 0}
+  .usp-grid{gap:1.5rem;grid-template-columns:repeat(2,1fr)}
+  .usp .icon{font-size:2rem}
+  .usp h4{font-size:.85rem;letter-spacing:.5px}
+  .usp p{font-size:.8rem;line-height:1.5}
+
+  /* RACING STRIP — already responsive, just tighten label */
+  .racing-tile h3{font-size:1.15rem;line-height:1.3}
+  .racing-tile p{font-size:.9rem}
+  .racing-tile .kicker{font-size:.65rem;letter-spacing:2px}
+
+  /* TWO FLOORS / VIDEO */
+  .two-floors-sub{font-size:.95rem;padding:0 .5rem;margin-bottom:1.5rem}
+  .lounge-2026{margin:1.2rem auto;gap:.7rem}
+  .lounge-2026 img{aspect-ratio:4/3}
+  .video-wrap{margin:1.5rem auto 0;border-width:1px}
+  .video-wrap video{max-height:none}
+
+  /* EVENT */
+  .event-content p{font-size:.95rem;line-height:1.6;margin-bottom:1.5rem}
+  .sponsor-box{padding:1.2rem;font-size:.9rem}
+  .sponsor-box p{font-size:.9rem}
+
+  /* ATMOSPHERE */
+  .atmosphere{padding:3rem 0}
+  .atmosphere-sub{font-size:.95rem;margin-bottom:1.5rem;padding:0 1rem}
+  .atmos-grid{padding:0 .5rem;gap:.5rem}
+
+  /* TRAVEL */
+  .travel{padding:3rem 0}
+  .travel-sub{font-size:.95rem;margin-bottom:1.8rem}
+  .travel-grid{grid-template-columns:repeat(2,1fr);gap:.7rem;padding:0 1.2rem;margin-bottom:1.8rem}
+  .travel-card{padding:1rem .8rem}
+  .travel-card .city{font-size:.95rem}
+  .travel-card .meta{font-size:.85rem}
+  .travel-card .meta span{font-size:.7rem}
+  .travel-info{font-size:.95rem;line-height:1.65}
+
+  /* DUTCH CONTEXT */
+  .context{padding:2.5rem 0}
+  .context h3{font-size:1.05rem;letter-spacing:1.5px}
+  .context p{font-size:.95rem;line-height:1.65}
+
+  /* TRUST BAR — 2x2 stacked */
+  .trust-bar{padding:2rem 0}
+  .trust-bar .stats{grid-template-columns:repeat(2,1fr);gap:1.5rem}
+  .trust-stat .num{font-size:2rem}
+  .trust-stat .label{font-size:.7rem;letter-spacing:1px}
+
+  /* TESTIMONIALS */
+  .testimonials{padding:3rem 0}
+  .testimonials-sub{font-size:.95rem;margin-bottom:2rem;padding:0 1rem}
+  .testi-grid{gap:1rem;padding:0 1rem}
+  .testi{padding:1.5rem 1.2rem}
+  .testi p{font-size:.9rem;line-height:1.6}
+  .testi::before{font-size:3.5rem;top:-8px;left:1rem}
+  .testi .who{font-size:.85rem}
+  .testi .whence{font-size:.7rem}
+  .testi .avatar{width:36px;height:36px;font-size:.75rem}
+
+  /* COUNTDOWN */
+  .countdown{gap:.5rem}
+  .cd-box{min-width:70px;padding:.85rem .6rem;border-radius:4px}
+  .cd-num{font-size:1.7rem}
+  .cd-label{font-size:.65rem;letter-spacing:.8px}
+
+  /* TICKETS */
+  .tickets{gap:1rem;margin-top:1.5rem}
+  .ticket{padding:1.5rem 1.2rem}
+  .ticket h3{font-size:1.05rem}
+  .ticket .price{font-size:1.5rem;margin:.4rem 0 .8rem}
+  .ticket p{font-size:.9rem;line-height:1.55;margin-bottom:1.2rem}
+  .ticket-badge{font-size:.65rem;padding:.3rem .65rem;top:-10px}
+  .ticket.featured{transform:none}
+  .ticket-note{font-size:.85rem;padding:0 .5rem;margin-top:1.5rem}
+
+  /* GALLERY */
+  .gallery{grid-template-columns:repeat(2,1fr);gap:.5rem}
+  .gallery img{height:130px}
+
+  /* SCHEDULE */
+  .schedule-day{margin-bottom:1.8rem}
+  .schedule-day h3{font-size:1.05rem;padding-bottom:.4rem}
+  .schedule-item{grid-template-columns:90px 1fr;gap:.6rem;padding:.55rem 0}
+  .schedule-item .time{font-size:.85rem}
+  .schedule-item .desc{font-size:.85rem;line-height:1.45}
+  .schedule-notes{padding:1.2rem;margin-top:1.5rem}
+  .schedule-notes p{font-size:.85rem;line-height:1.55;margin-bottom:.7rem}
+
+  /* VENUE */
+  .venue img{margin:1.5rem auto;border-radius:4px}
+  .parking-links{flex-direction:column;gap:.6rem;align-items:stretch;padding:0 1rem}
+  .parking-links a{padding:.85rem 1rem}
+
+  /* FAQ */
+  #faq{padding:3rem 0}
+  .faq-q{padding:1rem 1.1rem;font-size:.9rem;line-height:1.4;gap:.6rem}
+  .faq-q .icon{font-size:1.4rem;flex-shrink:0}
+  .faq-a{font-size:.9rem;line-height:1.55}
+  .faq-item.open .faq-a{padding:.4rem 1.1rem 1.2rem}
+  .faq-a ul{margin-left:1rem}
+
+  /* SPONSORS */
+  .sponsor-logos{gap:1.5rem 2rem;margin-top:1.5rem}
+  .sponsor-logos img{max-height:38px;max-width:110px}
+
+  /* FOOTER */
+  footer{padding:2.5rem 0 5.5rem}
+  .footer-grid{gap:1.5rem;margin-bottom:1.5rem}
+  .footer-col h4{font-size:.9rem}
+  .footer-col p,.footer-col a{font-size:.85rem}
+  .footer-bottom{font-size:.75rem;padding-top:1.5rem}
+  .footer-bottom p{margin-bottom:.4rem}
+
+  /* TAP TARGETS — minimum 44x44 */
+  .btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center;padding:.8rem 1.5rem;font-size:.8rem}
+  .lang-toggle button{min-height:36px;padding:.5rem .9rem}
+  a{padding:.1rem 0}
+
+  /* HEADER POLISH on mobile */
+  .header-inner{padding:.6rem .9rem;gap:.5rem}
+  .logos .partner{display:none}
+  .logos .ssl-mark{padding-right:0;border-right:none}
+  .logos .ssl-mark img{height:34px}
+  .logos .ssl-mark .tagline{display:none}
+
+  /* Reduce .divider visual weight */
+  .divider{height:20px;margin:.5rem 0}
+}
+
+/* EXTRA-SMALL PHONES (≤380px) */
+@media(max-width:380px){
+  .container{padding:0 1rem}
+  .hero h1{font-size:1.7rem}
+  .hero .sub{font-size:.9rem}
+  .lang-toggle{font-size:.75rem}
+  .lang-toggle button{padding:.4rem .7rem}
+  .usp-grid{grid-template-columns:1fr;gap:1.2rem}
+  .gallery{grid-template-columns:1fr;gap:.4rem}
+  .gallery img{height:200px}
+  .trust-stat .num{font-size:1.7rem}
+  .schedule-item{grid-template-columns:75px 1fr}
+}
+
+/* iOS Safari address bar handling */
+@supports (-webkit-touch-callout:none){
+  .hero{min-height:90vh;min-height:90svh}
+}
+
+/* Reduce motion for accessibility */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    transition-duration:.01ms !important;
+  }
+  html{scroll-behavior:auto}
+}
 </style>
 </head>
 <body>
@@ -1006,6 +1223,11 @@ footer{
   </div>
 </section>
 
+<!-- STICKY MOBILE BOTTOM CTA -->
+<div class="mobile-cta" aria-label="Quick book">
+  <a href="#" data-booking data-i18n="mobile_cta">Reserve VIP Tickets — €1,500</a>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <div class="container">
@@ -1055,13 +1277,14 @@ const translations = {
     hero_badge:"14–17 May 2026 · Nürburgring",
     usp1_t:"Two Floors", usp1_d:"Doubled lounge space — premium views from both levels.",
     usp2_t:"All Inclusive", usp2_d:"BBQ buffet, drinks & catering — fully covered, all 4 days.",
-    usp3_t:"Best View", usp3_d:"Direct trackside, exclusive videowall, paddock access.",
+    usp3_t:"Best View", usp3_d:"Direct at the Nordschleife, exclusive videowall, paddock access via shuttle.",
     usp4_t:"VIP Comfort", usp4_d:"Padded covered seats, parking + private shuttle.",
     atmos_title:"Pure Nürburgring Atmosphere",
     atmos_sub:"200,000+ fans. Legendary corners. The most demanding race in the world — and you in the front row.",
     stat1:"Floors of Lounge", stat2:"All Inclusive", stat3:"Fans on Site", stat4:"Full Circuit",
     logo_tagline:"VIP Lounge · 24h Nürburgring",
     partner_label:"Official Race",
+    mobile_cta:"Reserve VIP Tickets — €1,500",
     travel_title:"Getting to the Nürburgring",
     travel_sub:"From the Netherlands, the Nürburgring is closer than most race weekends abroad. Drive in Friday morning, race-ready by Saturday lunch.",
     travel_p1:"<strong>Free VIP parking + private shuttle.</strong> Book 4 or more VIP tickets and you receive a guaranteed parking space close to the Schwalbenschwanz Lounge. Our private shuttle runs continuously between the parking and the lounge entrance — no walking, no waiting.",
@@ -1085,7 +1308,7 @@ const translations = {
     testi3_q:"\"As a long-time 24h fan I was sceptical about VIP packages. The Schwalbenschwanz proved me wrong — the access, the food, the atmosphere. Worth every euro.\"",
     testi3_w:"VIP guest 2025, Netherlands",
     hero_title_1:"VIP Tickets 24h Nürburgring 2026", hero_title_2:"Two floors. Trackside. All inclusive.",
-    hero_sub:"The Schwalbenschwanz Lounge — exclusive two-storey VIP hospitality at the ADAC RAVENOL 24h Nürburgring. Direct trackside view, paddock access, full BBQ buffet & drinks, free parking + private shuttle.",
+    hero_sub:"The Schwalbenschwanz Lounge — exclusive two-storey VIP hospitality right on the legendary 24h camping area at Schwalbenschwanz, one of the most iconic sections of the Nordschleife. Experience the true 24h Nürburgring feeling: direct view of the Nordschleife, paddock access via private shuttle, full BBQ buffet & drinks, free parking + shuttle service.",
     hero_date:"54th edition · 14–17 May 2026 · Race start Saturday 15:00 CEST",
     teaser_title:"Experience the 24h race 2026",
     teaser_text:"Enjoy the legendary 24-hour race 2026 in the exclusive Schwalbenschwanz Lounge. Let yourself be pampered with comfort and the best seats right in the action!",
@@ -1131,13 +1354,14 @@ const translations = {
     hero_badge:"14–17 mei 2026 · Nürburgring",
     usp1_t:"Twee verdiepingen", usp1_d:"Verdubbelde loungeruimte — premium uitzicht op beide niveaus.",
     usp2_t:"Alles inbegrepen", usp2_d:"BBQ-buffet, dranken & catering — volledig inbegrepen, alle 4 dagen.",
-    usp3_t:"Beste uitzicht", usp3_d:"Direct aan het circuit, exclusieve videowall, paddock-toegang.",
+    usp3_t:"Beste uitzicht", usp3_d:"Direct aan de Nordschleife, exclusieve videowall, paddock-toegang via shuttle.",
     usp4_t:"VIP Comfort", usp4_d:"Gestoffeerde overdekte zitplaatsen, parkeerplaats + privé-shuttle.",
     atmos_title:"Pure Nürburgring sfeer",
     atmos_sub:"200.000+ fans. Legendarische bochten. De zwaarste race ter wereld — en u op de eerste rij.",
     stat1:"Verdiepingen lounge", stat2:"All-Inclusive", stat3:"Fans op locatie", stat4:"Heel circuit",
     logo_tagline:"VIP Lounge · 24u Nürburgring",
     partner_label:"Officiële Race",
+    mobile_cta:"Reserveer VIP Tickets — €1.500",
     travel_title:"Naar de Nürburgring",
     travel_sub:"Vanuit Nederland is de Nürburgring dichterbij dan menig race-weekend in het buitenland. Vrijdagochtend wegrijden, zaterdagmiddag klaar voor de start.",
     travel_p1:"<strong>Gratis VIP-parkeerplaats + privé-shuttle.</strong> Bij boeking van 4 of meer VIP-tickets ontvangt u een gegarandeerde parkeerplaats vlakbij de Schwalbenschwanz Lounge. Onze privé-shuttle rijdt continu tussen de parkeerplaats en de loungeingang — geen lopen, geen wachten.",
@@ -1161,7 +1385,7 @@ const translations = {
     testi3_q:"\"Als jarenlange 24u-fan was ik sceptisch over VIP-pakketten. De Schwalbenschwanz heeft me overtuigd — de toegang, het eten, de sfeer. Elke euro waard.\"",
     testi3_w:"VIP-gast 2025, Nederland",
     hero_title_1:"VIP Tickets 24u Nürburgring 2026", hero_title_2:"Twee verdiepingen. Direct aan het circuit. Alles inbegrepen.",
-    hero_sub:"De Schwalbenschwanz Lounge — exclusieve VIP-hospitality op twee verdiepingen bij de ADAC RAVENOL 24u Nürburgring. Direct uitzicht op het circuit, paddock-toegang, volledig BBQ-buffet & dranken, gratis parkeerplaats + privé-shuttle.",
+    hero_sub:"De Schwalbenschwanz Lounge — exclusieve VIP-hospitality op twee verdiepingen, midden op het legendarische 24h-campingterrein aan de Schwalbenschwanz, één van de meest iconische secties van de Nordschleife. Hier beleef je het 24 Uur Nürburgring-gevoel op z\u2019n puurst: direct uitzicht op de Nordschleife, met shuttle-aansluiting toegang tot de paddock, volledig BBQ-buffet & dranken, gratis parkeerplaats + privé-shuttle.",
     hero_date:"54e editie · 14–17 mei 2026 · Start zaterdag 15:00 CEST",
     teaser_title:"Beleef de 24u-race 2026",
     teaser_text:"Geniet van de legendarische 24-uursrace 2026 in de exclusieve Schwalbenschwanz Lounge. Laat u verwennen met comfort en de beste plaatsen midden in het gebeuren!",
